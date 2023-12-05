@@ -3,9 +3,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest      # Docker-based github actions have to run on a linux environment
+    runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: HTML/CSS/JS Minifier
         uses: docker://devatherock/minify-js:3.0.0
         with:
           add_suffix: true
+      - uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
