@@ -1,0 +1,11 @@
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest      # Docker-based github actions have to run on a linux environment
+    steps:
+      - name: HTML/CSS/JS Minifier
+        uses: docker://devatherock/minify-js:3.0.0
+        with:
+          add_suffix: true
