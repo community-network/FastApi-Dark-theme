@@ -9256,7 +9256,6 @@ body a:hover {
 
 .swagger-ui .opblock .opblock-summary-path {
     flex-shrink: 0;
-    max-width: calc(100% - 110px - 15rem)
 }
 
 .swagger-ui .opblock .opblock-summary-path__deprecated {
@@ -9272,7 +9271,8 @@ body a:hover {
     flex: 1 1 auto;
     font-family: sans-serif;
     font-size: 13px;
-    word-break: break-word
+    word-break: break-word;
+    padding: 0px 10px;
 }
 
 .swagger-ui .opblock .opblock-summary {
